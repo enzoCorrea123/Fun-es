@@ -14,15 +14,9 @@ public class ex12 {
 	}
 
 	static String verificarSobrenome(String nome) {
-		for (int contador = 0; contador < nome.length(); contador++) {
-			if (nome.charAt(contador) == ' ') {
-				int contadorEspaco = nome.charAt(contador);
-				for (int contador2 = 0; contador2 < contadorEspaco; contador2++) {//arrumar aqui
-					nome.replace(nome.charAt(contador2), ' ');
-				}
-			}
-		}
-		return nome;
+		String[] partes = nome.split(" ");
+		String sobrenome = partes[partes.length - 1];
+		return sobrenome;
 
 	}
 
